@@ -13,6 +13,7 @@ Tapi begitu nyoba backend, apalagi yang udah mulai pake SharedPreferences buat n
 
 - **Tambah To Do**  
   Pengguna bisa nambah data to do baru. Model data dari to do ini berisi:
+  - `id`: buat id to do-nya
   - `startDate`: tanggal mulai aktivitasnya
   - `endDate`: tanggal selesai atau deadline-nya
   - `title`: judul atau nama to do-nya
@@ -25,6 +26,7 @@ Tapi begitu nyoba backend, apalagi yang udah mulai pake SharedPreferences buat n
 
 - **User Info Page**  
   Ada halaman khusus buat liat dan edit informasi user. Data yang bisa diedit di sini:
+  - `foto profile`
   - `username`
   - `tanggal lahir`
   - `major` (jurusan)
@@ -40,13 +42,13 @@ Berikut beberapa package yang aku pake di project ini, beserta fungsinya:
   Package ini dipakai buat state management, routing, dan dependency injection. Simpelnya, `get` bikin proses pindah halaman, ngatur data antar-widget, dan komunikasi antar-screen jadi lebih gampang dan clean.
 
 - **shared_preferences**  
-  Library ini buat nyimpen data secara lokal di device. Cocok buat data ringan kayak data user (username, email, dll) atau status login. Di app ini, aku pake buat nyimpen info user dan status isDone dari to do.
+  Library ini buat nyimpen data secara lokal di device. Cocok buat app ini karena data yang ada tidak rumit.
 
 - **intl**  
   Ini library buat formatting tanggal, waktu, dan angka sesuai locale. Aku gunain buat format tanggal di `startDate` dan `endDate`, supaya tampilannya lebih user-friendly (misal: 10 Mar 2025, bukan format yang ribet).
 
 - **image_picker**  
-  Package ini berguna buat ngambil gambar dari gallery atau kamera. Di app ini, aku rencanain buat ambil gambar profil user atau mungkin buat kebutuhan lain ke depannya.
+  Package ini berguna buat ngambil gambar dari gallery atau kamera. Di app ini, aku rencanain buat ambil gambar profil user.
 
 ---
 
